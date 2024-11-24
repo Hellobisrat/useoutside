@@ -47,4 +47,26 @@ return () => {
 };
 
 
+# Conditional Rendering:
+
+{showContent ? (...) : (...)}: Wrap the condition inside braces to evaluate showContent correctly.
+
+If showContent is true, the content inside the <div ref={ref}> will be rendered.
+
+If showContent is false, the button will be rendered.
+
+# State Management:
+
+showContent: Manages whether the content is shown or not.
+
+ref: Holds the reference to the content that should be closed when clicking outside.
+
+# Custom Hook (useOutsideClick):
+useOutsideClick(ref,()=>setShowContent(false))
+
+Attaches event listeners to detect clicks outside the referenced element.
+
+Calls the setShowContent(false) handler to close the content if a click outside is detected.
+
+
 # bisrat Nov 24 2024
